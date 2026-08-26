@@ -1,0 +1,17 @@
+---
+name: governance-reduction-pass
+description: >-
+  Use when tests, contracts, schemas, validators, docs, generated artifacts,
+  fixtures, workflows, or agent-facing repository machinery have become
+  architectural drag. Recover current intent and real consumer boundaries,
+  then delete or simplify incidental governance while preserving observable,
+  safety-critical, and externally meaningful invariants.
+version: 1.0.0
+author: Ryan Raposo
+license: MIT
+platforms: [linux, macos]
+metadata:
+  hermes:
+    tags: [software-development, refactoring, governance, tests, contracts, documentation, maintenance]
+    category: developer-tools
+---
