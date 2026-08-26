@@ -24,6 +24,17 @@ Usage: ./install.sh [options]
 USAGE
 }
 
+cat <<'MASCOT'
+
+▄ ▄▄ ▄▄▄▄      8<======
+   ▄▀ 0x0 ▀▄────┘
+    █  ───  █
+    █  [#]  █
+     ▀▀   ▀▀
+ I loves my gun
+
+MASCOT
+
 while [ "$#" -gt 0 ]; do
   case "$1" in
     --hermes-only) [ "$MODE" = both ] || die "choose one runtime scope"; MODE=hermes; shift ;;
