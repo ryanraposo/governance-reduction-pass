@@ -1,6 +1,17 @@
 <div align="center">
 
-<img src="assets/little-guy.svg" alt="Snip, the red-tape goblin" width="280" />
+<pre>
+      .-^-.
+    _/ o o \_
+   / \  ^  / \
+  |   \___/   |----8&lt;======
+  |  /|[#]|\  |
+   \/_|___|_\/
+     /|   |\
+    /_|___|_\
+       / \
+      /_/ \_\
+</pre>
 
 # Governance-Reduction Pass
 
@@ -12,7 +23,11 @@ A repository skill for deleting the kind of “responsible engineering” that q
 
 Meet **Snip**, the repo’s red-tape goblin.
 
-He cuts bureaucracy with absurdly large scissors, keeps a shield over the things that actually matter, and serves as a mascot for the whole thesis of this skill: **cut ceremony, preserve capability**. His exact review comment would be, *“I loves my ‘gun.’”* By “gun,” he means the shears. Legal remains unconvinced.
+He carries an absurdly large pair of shears, keeps a tiny shield over the things that actually matter, and embodies the whole thesis of this skill: **cut ceremony, preserve capability**.
+
+> “I loves my ‘gun.’”
+>
+> — Snip, referring to the shears. Legal remains unconvinced.
 
 This repo has a little guy on purpose. Like the mascot-first touches in GWCU and the skill template, the point is not mere decoration. The mascot makes the repo friendlier, more memorable, and more explicit about what the system is trying to do: cut red tape without cutting real guarantees.
 
@@ -44,9 +59,9 @@ If all three answers are no, deletion should be the default candidate.
 
 Snip is intentionally explicit about the skill’s values:
 
-- **the scissors**: obsolete ceremony, fossilized tests, and legacy process machinery are fair game;
+- **the shears**: obsolete ceremony, fossilized tests, and legacy process machinery are fair game;
 - **the shield**: true invariants, external boundaries, and meaningful behavioral guarantees stay protected;
-- **the sprout**: freedom recovered should make the repository easier to evolve next week, not only cleaner today.
+- **the little guy himself**: repos deserve a memorable personality, especially when the underlying engineering is serious.
 
 In other words: this is not a random goblin. This is applied repository philosophy with ears.
 
@@ -109,7 +124,6 @@ Interview answers are evidence of **current intent**, not a new eternal contract
 | `AGENTS.md` | Repository-facing install/use/maintenance guide |
 | `references/interviewing.md` | Invariant-recovery interview protocol |
 | `scripts/scan-governance.py` | Non-binding diagnostic inventory |
-| `assets/little-guy.svg` | Snip, the repo mascot |
 | `index.html` | Mascot-first landing page |
 | `runtimes/hermes-frontmatter.yaml` | Hermes-native metadata overlay |
 | `agents/openai.yaml` | OpenAI/portable skill metadata |
