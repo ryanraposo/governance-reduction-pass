@@ -1,16 +1,11 @@
 <div align="center">
-
 <pre>
-      .-^-.
-    _/ o o \_
-   / \  ^  / \
-  |   \___/   |----8&lt;======
-  |  /|[#]|\  |
-   \/_|___|_\/
-     /|   |\
-    /_|___|_\
-       / \
-      /_/ \_\
+▄ ▄▄ ▄▄▄▄      8&lt;======
+   ▄▀ 0x0 ▀▄────┘
+    █  ───  █
+    █  [#]  █
+     ▀▀   ▀▀
+ I loves my gun
 </pre>
 
 # Governance-Reduction Pass
@@ -19,17 +14,10 @@
 
 A repository skill for deleting the kind of “responsible engineering” that quietly makes responsible change harder.
 
+[Install](#install) · [Use](#use) · [Scanner](#diagnostic-scanner) · [Interviewing](#interviewing)
 </div>
 
-Meet **Snip**, the repo’s red-tape goblin.
-
-He carries an absurdly large pair of shears, keeps a tiny shield over the things that actually matter, and embodies the whole thesis of this skill: **cut ceremony, preserve capability**.
-
-> “I loves my ‘gun.’”
->
-> — Snip, referring to the shears. Legal remains unconvinced.
-
-This repo has a little guy on purpose. Like the mascot-first touches in GWCU and the skill template, the point is not mere decoration. The mascot makes the repo friendlier, more memorable, and more explicit about what the system is trying to do: cut red tape without cutting real guarantees.
+---
 
 Tests, contracts, schemas, validators, docs, fixtures, generated artifacts, workflows, and agent-facing machinery should protect what matters. They should not constitutionalize today's implementation.
 
@@ -54,16 +42,6 @@ The governing test is simple:
 3. Would deleting it make an important decision genuinely unknowable?
 
 If all three answers are no, deletion should be the default candidate.
-
-## Mascot stance
-
-Snip is intentionally explicit about the skill’s values:
-
-- **the shears**: obsolete ceremony, fossilized tests, and legacy process machinery are fair game;
-- **the shield**: true invariants, external boundaries, and meaningful behavioral guarantees stay protected;
-- **the little guy himself**: repos deserve a memorable personality, especially when the underlying engineering is serious.
-
-In other words: this is not a random goblin. This is applied repository philosophy with ears.
 
 ## Install
 
@@ -124,7 +102,7 @@ Interview answers are evidence of **current intent**, not a new eternal contract
 | `AGENTS.md` | Repository-facing install/use/maintenance guide |
 | `references/interviewing.md` | Invariant-recovery interview protocol |
 | `scripts/scan-governance.py` | Non-binding diagnostic inventory |
-| `index.html` | Mascot-first landing page |
+| `index.html` | Published little-guy landing page |
 | `runtimes/hermes-frontmatter.yaml` | Hermes-native metadata overlay |
 | `agents/openai.yaml` | OpenAI/portable skill metadata |
 | `install.sh` / `uninstall.sh` | Managed dual-runtime installation |
@@ -139,9 +117,5 @@ There is intentionally no internal constitution, schema graph, generated manifes
 ```
 
 The tests protect package identity, installability, runtime composition, and scanner behavior. They intentionally avoid pinning line counts, question counts, wording snapshots, or internal document structure.
-
-## Publishing target
-
-Prepared for `ryanraposo/governance-reduction-pass`, version `1.0.0`, derived from the conventions of `ryanraposo/skill-template` while applying the governance-reduction principle to the derived package itself.
 
 MIT © Ryan Raposo
