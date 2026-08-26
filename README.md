@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/little-guy.svg" alt="Snip, the red-tape goblin" width="280" />
+
 # Governance-Reduction Pass
 
 **Preserve invariants. Liberate implementation.**
@@ -7,6 +9,12 @@
 A repository skill for deleting the kind of “responsible engineering” that quietly makes responsible change harder.
 
 </div>
+
+Meet **Snip**, the repo’s red-tape goblin.
+
+He cuts bureaucracy with absurdly large scissors, keeps a shield over the things that actually matter, and serves as a mascot for the whole thesis of this skill: **cut ceremony, preserve capability**. His exact review comment would be, *“I loves my ‘gun.’”* By “gun,” he means the shears. Legal remains unconvinced.
+
+This repo has a little guy on purpose. Like the mascot-first touches in GWCU and the skill template, the point is not mere decoration. The mascot makes the repo friendlier, more memorable, and more explicit about what the system is trying to do: cut red tape without cutting real guarantees.
 
 Tests, contracts, schemas, validators, docs, fixtures, generated artifacts, workflows, and agent-facing machinery should protect what matters. They should not constitutionalize today's implementation.
 
@@ -31,6 +39,16 @@ The governing test is simple:
 3. Would deleting it make an important decision genuinely unknowable?
 
 If all three answers are no, deletion should be the default candidate.
+
+## Mascot stance
+
+Snip is intentionally explicit about the skill’s values:
+
+- **the scissors**: obsolete ceremony, fossilized tests, and legacy process machinery are fair game;
+- **the shield**: true invariants, external boundaries, and meaningful behavioral guarantees stay protected;
+- **the sprout**: freedom recovered should make the repository easier to evolve next week, not only cleaner today.
+
+In other words: this is not a random goblin. This is applied repository philosophy with ears.
 
 ## Install
 
@@ -91,6 +109,8 @@ Interview answers are evidence of **current intent**, not a new eternal contract
 | `AGENTS.md` | Repository-facing install/use/maintenance guide |
 | `references/interviewing.md` | Invariant-recovery interview protocol |
 | `scripts/scan-governance.py` | Non-binding diagnostic inventory |
+| `assets/little-guy.svg` | Snip, the repo mascot |
+| `index.html` | Mascot-first landing page |
 | `runtimes/hermes-frontmatter.yaml` | Hermes-native metadata overlay |
 | `agents/openai.yaml` | OpenAI/portable skill metadata |
 | `install.sh` / `uninstall.sh` | Managed dual-runtime installation |
