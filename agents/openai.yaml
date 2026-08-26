@@ -1,0 +1,7 @@
+interface:
+  display_name: "Governance-Reduction Pass"
+  short_description: "Preserve invariants. Liberate implementation."
+  default_prompt: "Use $governance-reduction-pass on this codebase, branch, or pull request. Recover real invariants, then remove governance that only fossilizes incidental implementation."
+
+policy:
+  allow_implicit_invocation: true
