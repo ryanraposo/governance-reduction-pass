@@ -25,11 +25,11 @@ USAGE
 }
 
 cat <<'SNIP'
-▄ ▄▄ ▄▄▄▄      8<======
-   ▄▀ 0x0 ▀▄────┘
-    █  ───  █      I loves my gun
-    █  ███  █──────╾━╤デ╦︻
-     ▀▀   ▀▀
+▄ ▄▄ ▄▄▄▄    8<====
+   ▄▀ 0x0 ▀▄----/
+    █  ───  █    I loves my gun
+    █  ███  █----[::]=======>
+     ▀▀   ▀▀       \__
 SNIP
 
 while [ "$#" -gt 0 ]; do
@@ -228,9 +228,9 @@ if $had_backup; then printf '  %-9s %s\n' 'backups:' "$transaction"; fi
 printf '  %-9s %s\n' 'receipt:' "$transaction/receipt"
 printf '  %-9s %s\n\n' 'Next:' "$next_step"
 cat <<'SNIP_SUCCESS'
-▄ ▄▄ ▄▄▄▄      8<======
-   ▄▀ ^x^ ▀▄────┘
-    █  ───  █      I reduced it good
-    █  ███  █──────╾━╤デ╦︻ *
-     ▀▀   ▀▀
+▄ ▄▄ ▄▄▄▄    8<====
+   ▄▀ ^x^ ▀▄----/
+    █  ───  █    I reduced it good
+    █  ███  █----[::]=======>*
+     ▀▀   ▀▀       \__
 SNIP_SUCCESS

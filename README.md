@@ -1,10 +1,10 @@
 <div align="center">
 <pre>
-▄ ▄▄ ▄▄▄▄      8<======
-   ▄▀ 0x0 ▀▄────┘
-    █  ───  █      I loves my gun
-    █  ███  █──────╾━╤デ╦︻
-     ▀▀   ▀▀
+▄ ▄▄ ▄▄▄▄    8&lt;====
+   ▄▀ 0x0 ▀▄----/
+    █  ───  █    I loves my gun
+    █  ███  █----[::]=======>
+     ▀▀   ▀▀       \__
 </pre>
 
 # Governance Reduction Pass
