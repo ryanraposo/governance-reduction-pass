@@ -16,7 +16,7 @@
   "found an invariant"
 </pre>
 
-# Governance-Reduction Pass
+# Governance Reduction Pass
 
 **Preserve invariants. Liberate implementation.**
 
