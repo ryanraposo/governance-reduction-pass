@@ -26,13 +26,20 @@ USAGE
 
 cat <<'SNIP'
 
-          8<================
-             ╲
-    ▄▀ 0x0 ▀▄──┘       I loves my gun
-    █  ───  █╾━┳━━━━━━━━━━━━━━━━━━━━>
-    █  [#]  █  ┃
-     ▀▀   ▀▀   ┗━━━━━━━━┓
-      ╵   ╵             O O
+      .------.
+     /  0  0  \
+    |    __    |────────┐
+    |   [✂]    |        └╾━╤デ╦︻
+     \   ~~   /
+      '------'
+       /|  |\
+      /_|__|_\
+        /  \
+       /____\
+
+        SNIP
+
+  "found an invariant"
 
 SNIP
 
@@ -232,14 +239,18 @@ if $had_backup; then printf '  %-9s %s\n' 'backups:' "$transaction"; fi
 printf '  %-9s %s\n' 'receipt:' "$transaction/receipt"
 printf '  %-9s %s\n\n' 'Next:' "$next_step"
 cat <<'SNIP_SUCCESS'
-          8<==  ==  ==
-             ╲
-    ▄▀ ^x^ ▀▄──┘       I loves my gun
-    █  ╰─╯  █╾━┳━━━━━━━━━━━━━━━━━━━━>  ~
-    █  [✓]  █  ┃
-     ▀▀   ▀▀   ┗━━━━━━━━┓
-      ╵   ╵             O O
+      .------.
+     /  0  0  \
+    |    __    |────────┐
+    |   [✂]    |        └╾━╤デ╦︻
+     \   ~~   /
+      '------'
+         ||
+       __||__
+      /______\
 
-  schema.json has left the chat
+        SNIP
+
+ "the test asserted too much"
 
 SNIP_SUCCESS
