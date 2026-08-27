@@ -2,10 +2,9 @@
 <pre>
 ▄ ▄▄ ▄▄▄▄      8&lt;======
    ▄▀ 0x0 ▀▄────┘
-    █  ───  █
+    █  ───  █  I loves my gun
     █  [#]  █
      ▀▀   ▀▀
- I loves my gun
 </pre>
 
 # Governance-Reduction Pass
