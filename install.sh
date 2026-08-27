@@ -25,22 +25,11 @@ USAGE
 }
 
 cat <<'SNIP'
-
-      .------.
-     /  0  0  \
-    |    __    |────────┐
-    |   [✂]    |        └╾━╤デ╦︻
-     \   ~~   /
-      '------'
-       /|  |\
-      /_|__|_\
-        /  \
-       /____\
-
-        SNIP
-
-  "found an invariant"
-
+▄ ▄▄ ▄▄▄▄      8<======
+   ▄▀ 0x0 ▀▄────┘
+    █  ───  █      I loves my gun
+    █  ███  █──────╾━╤デ╦︻
+     ▀▀   ▀▀
 SNIP
 
 while [ "$#" -gt 0 ]; do
@@ -239,18 +228,9 @@ if $had_backup; then printf '  %-9s %s\n' 'backups:' "$transaction"; fi
 printf '  %-9s %s\n' 'receipt:' "$transaction/receipt"
 printf '  %-9s %s\n\n' 'Next:' "$next_step"
 cat <<'SNIP_SUCCESS'
-      .------.
-     /  0  0  \
-    |    __    |────────┐
-    |   [✂]    |        └╾━╤デ╦︻
-     \   ~~   /
-      '------'
-         ||
-       __||__
-      /______\
-
-        SNIP
-
- "the test asserted too much"
-
+▄ ▄▄ ▄▄▄▄      8<======
+   ▄▀ ^x^ ▀▄────┘
+    █  ───  █      I reduced it good
+    █  ███  █──────╾━╤デ╦︻ *
+     ▀▀   ▀▀
 SNIP_SUCCESS

@@ -1,19 +1,10 @@
 <div align="center">
 <pre>
-      .------.
-     /  0  0  \
-    |    __    |────────┐
-    |   [✂]    |        └╾━╤デ╦︻
-     \   ~~   /
-      '------'
-       /|  |\
-      /_|__|_\
-        /  \
-       /____\
-
-        SNIP
-
-  "found an invariant"
+▄ ▄▄ ▄▄▄▄      8<======
+   ▄▀ 0x0 ▀▄────┘
+    █  ───  █      I loves my gun
+    █  ███  █──────╾━╤デ╦︻
+     ▀▀   ▀▀
 </pre>
 
 # Governance Reduction Pass
