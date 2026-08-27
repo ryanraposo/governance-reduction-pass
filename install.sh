@@ -29,10 +29,9 @@ cat <<'SNIP'
 Snip
 ▄ ▄▄ ▄▄▄▄      8<======
    ▄▀ 0x0 ▀▄────┘
-    █  ───  █
-    █  [#]  █
-     ▀▀   ▀▀
- I loves my gun
+    █  ───  █  I loves my gun
+    █  [#]  █╾━┳━━━━>
+     ▀▀   ▀▀   ┗━┛
 
 SNIP
 
@@ -235,9 +234,8 @@ cat <<'SNIP_SUCCESS'
 Snip
 ▄ ▄▄ ▄▄▄▄      8<==  ==  ==
    ▄▀ ^x^ ▀▄────┘
-    █  ───  █
-    █  [✓]  █
-     ▀▀   ▀▀
- I loves my gun
+    █  ───  █  I loves my gun
+    █  [✓]  █╾━┳━━━━>
+     ▀▀   ▀▀   ┗━┛
 
 SNIP_SUCCESS
