@@ -1,11 +1,12 @@
 <div align="center">
 <pre>
-Snip
-▄ ▄▄ ▄▄▄▄      8&lt;======
-   ▄▀ 0x0 ▀▄────┘
-    █  ───  █  I loves my gun
-    █  [#]  █╾━┳━━━━&gt;
-     ▀▀   ▀▀   ┗━┛
+          8&lt;================
+             ╲
+    ▄▀ 0x0 ▀▄──┘       I loves my gun
+    █  ───  █╾━┳━━━━━━━━━━━━━━━━━━━━&gt;
+    █  [#]  █  ┃
+     ▀▀   ▀▀   ┗━━━━━━━━┓
+      ╵   ╵             O O
 </pre>
 
 # Governance-Reduction Pass
@@ -19,7 +20,7 @@ A repository skill for deleting the kind of “responsible engineering” that q
 
 ---
 
-**Snip** is the little guy. His shears are aggressively oversized. His gun is now an actual gun. His remit is narrower than his enthusiasm: cut accidental governance; guard the invariants that actually matter.
+**Snip** is the little guy. He is approximately three inches tall and has somehow acquired industrial shears and a crew-served governance cannon. His gun has wheels. Snip has no paperwork. His remit is narrower than his enthusiasm: cut accidental governance; guard the invariants that actually matter.
 
 Tests, contracts, schemas, validators, docs, fixtures, generated artifacts, workflows, and agent-facing machinery should protect what matters. They should not constitutionalize today's implementation.
 
