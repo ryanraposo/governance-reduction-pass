@@ -28,10 +28,9 @@ cat <<'MASCOT'
 
 ▄ ▄▄ ▄▄▄▄      8<======
    ▄▀ 0x0 ▀▄────┘
-    █  ───  █
+    █  ───  █  I loves my gun
     █  [#]  █
      ▀▀   ▀▀
- I loves my gun
 
 MASCOT
 
