@@ -24,15 +24,17 @@ Usage: ./install.sh [options]
 USAGE
 }
 
-cat <<'MASCOT'
+cat <<'SNIP'
 
+Snip
 ▄ ▄▄ ▄▄▄▄      8<======
    ▄▀ 0x0 ▀▄────┘
-    █  ───  █  I loves my gun
+    █  ───  █
     █  [#]  █
      ▀▀   ▀▀
+ I loves my gun
 
-MASCOT
+SNIP
 
 while [ "$#" -gt 0 ]; do
   case "$1" in
@@ -117,9 +119,14 @@ verify_payload(){
   fi
 }
 
+info "Mode: $MODE"
+info "[install 1/5] Preflight: source identity, runtime metadata, and tools"
 verify_source
 ok "source verified"
-if $VERIFY_ONLY; then exit 0; fi
+if $VERIFY_ONLY; then
+  ok "verify-only complete; no installation state was changed"
+  exit 0
+fi
 
 labels=()
 targets=()
@@ -127,10 +134,10 @@ case "$MODE" in both|hermes) labels+=(hermes); targets+=("$HERMES_ROOT/skills/$N
 case "$MODE" in both|agents) labels+=(agents); targets+=("$AGENTS_ROOT/skills/$NAME") ;; esac
 
 info "Hermes is composed and verified first when included."
-info "Install plan:"
-for i in "${!targets[@]}"; do printf '  %-7s %s\n' "${labels[$i]}" "${targets[$i]}"; done
+info "[install 2/5] Plan exact destinations"
+for i in "${!targets[@]}"; do printf '  %-8s %s\n' "${labels[$i]}:" "${targets[$i]}"; done
 if $DRY_RUN; then
-  ok "dry run complete; no skill homes, backups, locks, or staging directories were created"
+  ok "dry run complete; no skill homes, backups, locks, transactions, or staging directories were created"
   exit 0
 fi
 
@@ -142,29 +149,34 @@ lock="$STATE_ROOT/install.lock"
 if ! mkdir "$lock" 2>/dev/null; then die "another install appears active: $lock"; fi
 cleanup_lock(){ [ ! -d "$lock" ] || rm -rf -- "$lock"; }
 trap cleanup_lock EXIT
-trap 'exit 129' HUP
-trap 'exit 130' INT
-trap 'exit 143' TERM
 
 stages=()
 olds=()
 committed=0
+had_backup=false
 rollback(){
   local i target old failed stage
-  warn "rolling back $committed committed target(s)"
+  warn "Rollback: restoring $committed committed target(s)"
   for ((i=committed-1; i>=0; i--)); do
     target="${targets[$i]}"; old="${olds[$i]}"
     if [ -e "$target" ]; then
       failed="$transaction/${labels[$i]}.failed"
-      mv "$target" "$failed" || true
+      mv "$target" "$failed" || warn "manual cleanup may be required: $target"
     fi
-    if [ -n "$old" ] && [ -e "$old" ]; then mv "$old" "$target" || true; fi
+    if [ -n "$old" ] && [ -e "$old" ]; then
+      mv "$old" "$target" || warn "manual restore required: $old -> $target"
+    fi
   done
   for stage in "${stages[@]:-}"; do [ ! -e "$stage" ] || rm -rf -- "$stage"; done
 }
 on_error(){ local rc=$?; rollback; exit "$rc"; }
+on_signal(){ local rc="$1"; rollback; exit "$rc"; }
 trap on_error ERR
+trap 'on_signal 129' HUP
+trap 'on_signal 130' INT
+trap 'on_signal 143' TERM
 
+info "[install 3/5] Stage and verify runtime payloads"
 for i in "${!targets[@]}"; do
   target="${targets[$i]}"
   parent="$(dirname "$target")"
@@ -178,29 +190,54 @@ version=$(cat "$ROOT/VERSION")
 runtime=${labels[$i]}
 MARKER
   verify_payload "${labels[$i]}" "$stage"
+  ok "${labels[$i]} payload staged and verified"
 done
 
+info "[install 4/5] Commit and independently verify"
 for i in "${!targets[@]}"; do
   target="${targets[$i]}"
   old=""
   if [ -e "$target" ]; then
     old="$transaction/${labels[$i]}"
     mv "$target" "$old"
-    if [ ! -f "$old/.${NAME}-managed" ]; then warn "preserved unmanaged ${labels[$i]} destination -> $old"; fi
+    had_backup=true
+    if [ ! -f "$old/.${NAME}-managed" ]; then
+      warn "Preserved unmanaged ${labels[$i]} destination -> $old"
+    else
+      info "Preserved previous managed ${labels[$i]} copy -> $old"
+    fi
   fi
   olds+=("$old")
   mv "${stages[$i]}" "$target"
   committed=$((committed+1))
   verify_payload "${labels[$i]}" "$target"
-  ok "${labels[$i]} installed and verified"
+  ok "${labels[$i]} committed and verified"
 done
 
-trap - ERR
+info "[install 5/5] Finalize receipt and next action"
+trap - ERR HUP INT TERM
 printf 'installed=%s\nversion=%s\nmode=%s\n' "$(date -u +%FT%TZ)" "$(cat "$ROOT/VERSION")" "$MODE" > "$transaction/receipt"
 cleanup_lock
-trap - EXIT HUP INT TERM
+trap - EXIT
 
-printf '\nFreedom tool installed.\n'
-for i in "${!targets[@]}"; do printf '  %-7s %s\n' "${labels[$i]}" "${targets[$i]}"; done
-printf '  receipt %s\n' "$transaction/receipt"
-printf '  Next: start a fresh agent session so the skill is rediscovered.\n'
+case "$MODE" in
+  hermes) next_step="start a fresh Hermes session so the native skill is rediscovered." ;;
+  agents) next_step="start a fresh agent session so the portable skill is rediscovered." ;;
+  *) next_step="start a fresh Hermes or agent session so the installed skill is rediscovered." ;;
+esac
+
+printf '\nFreedom tool installed and verified.\n\n'
+for i in "${!targets[@]}"; do printf '  %-9s %s\n' "${labels[$i]}:" "${targets[$i]}"; done
+if $had_backup; then printf '  %-9s %s\n' 'backups:' "$transaction"; fi
+printf '  %-9s %s\n' 'receipt:' "$transaction/receipt"
+printf '  %-9s %s\n\n' 'Next:' "$next_step"
+cat <<'SNIP_SUCCESS'
+Snip
+▄ ▄▄ ▄▄▄▄      8<==  ==  ==
+   ▄▀ ^x^ ▀▄────┘
+    █  ───  █
+    █  [✓]  █
+     ▀▀   ▀▀
+ I loves my gun
+
+SNIP_SUCCESS
