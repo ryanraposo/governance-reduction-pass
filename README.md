@@ -1,10 +1,12 @@
 <div align="center">
 <pre>
+Snip
 ▄ ▄▄ ▄▄▄▄      8&lt;======
    ▄▀ 0x0 ▀▄────┘
-    █  ───  █  I loves my gun
+    █  ───  █
     █  [#]  █
      ▀▀   ▀▀
+ I loves my gun
 </pre>
 
 # Governance-Reduction Pass
@@ -17,6 +19,8 @@ A repository skill for deleting the kind of “responsible engineering” that q
 </div>
 
 ---
+
+**Snip** is the little guy. His gun is a pair of aggressively oversized shears. His remit is narrower than his enthusiasm: cut accidental governance; guard the invariants that actually matter.
 
 Tests, contracts, schemas, validators, docs, fixtures, generated artifacts, workflows, and agent-facing machinery should protect what matters. They should not constitutionalize today's implementation.
 
@@ -101,7 +105,7 @@ Interview answers are evidence of **current intent**, not a new eternal contract
 | `AGENTS.md` | Repository-facing install/use/maintenance guide |
 | `references/interviewing.md` | Invariant-recovery interview protocol |
 | `scripts/scan-governance.py` | Non-binding diagnostic inventory |
-| `index.html` | Published little-guy landing page |
+| `index.html` | Published Snip landing page |
 | `runtimes/hermes-frontmatter.yaml` | Hermes-native metadata overlay |
 | `agents/openai.yaml` | OpenAI/portable skill metadata |
 | `install.sh` / `uninstall.sh` | Managed dual-runtime installation |
