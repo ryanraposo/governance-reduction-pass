@@ -26,12 +26,13 @@ USAGE
 
 cat <<'SNIP'
 
-Snip
-▄ ▄▄ ▄▄▄▄      8<======
-   ▄▀ 0x0 ▀▄────┘
-    █  ───  █  I loves my gun
-    █  [#]  █╾━┳━━━━>
-     ▀▀   ▀▀   ┗━┛
+          8<================
+             ╲
+    ▄▀ 0x0 ▀▄──┘       I loves my gun
+    █  ───  █╾━┳━━━━━━━━━━━━━━━━━━━━>
+    █  [#]  █  ┃
+     ▀▀   ▀▀   ┗━━━━━━━━┓
+      ╵   ╵             O O
 
 SNIP
 
@@ -231,11 +232,14 @@ if $had_backup; then printf '  %-9s %s\n' 'backups:' "$transaction"; fi
 printf '  %-9s %s\n' 'receipt:' "$transaction/receipt"
 printf '  %-9s %s\n\n' 'Next:' "$next_step"
 cat <<'SNIP_SUCCESS'
-Snip
-▄ ▄▄ ▄▄▄▄      8<==  ==  ==
-   ▄▀ ^x^ ▀▄────┘
-    █  ───  █  I loves my gun
-    █  [✓]  █╾━┳━━━━>
-     ▀▀   ▀▀   ┗━┛
+          8<==  ==  ==
+             ╲
+    ▄▀ ^x^ ▀▄──┘       I loves my gun
+    █  ╰─╯  █╾━┳━━━━━━━━━━━━━━━━━━━━>  ~
+    █  [✓]  █  ┃
+     ▀▀   ▀▀   ┗━━━━━━━━┓
+      ╵   ╵             O O
+
+  schema.json has left the chat
 
 SNIP_SUCCESS
